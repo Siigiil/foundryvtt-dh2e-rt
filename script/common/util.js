@@ -118,7 +118,7 @@ export default class DarkHeresyUtil {
         const skill = actor.skills[skillName];
         const speciality = skill.specialities[specialityName];
         return foundry.utils.mergeObject(this.createCommonNormalRollData(actor, speciality), {
-            name: speciality.label
+            name: skill.label.concat(" (", speciality.label, ")")
         });
     }
 
